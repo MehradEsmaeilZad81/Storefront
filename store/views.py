@@ -67,8 +67,8 @@ class CollectionList(ListCreateAPIView):
 
 
 class CollectionDetail(RetrieveUpdateDestroyAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+    queryset = Collection.objects.all()
+    serializer_class = CollectionSerializer
 
     def delete(self, request, pk):
         if collection.products.count() > 0:
